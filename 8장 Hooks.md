@@ -60,7 +60,7 @@ export default Info;
 
 결과
 
- <img src="./img/image-20200516213435029.png" alt="image-20200516213435029" style="zoom:67%; border:solid 1px\" />
+ <img src="./img/image-20200516213435029.png" alt="image-20200516213435029" />
 
 </br>
 
@@ -96,7 +96,7 @@ useEffect 에서 설정한 함수를 컴포넌트가 화면에 맨 처음 렌더
 
  (콘솔창을 보면, 처음 마운트될 때만 실행되고, 업데이트될 때는 실행하지 않음.)
 
- <img src="./img/image-20200517182938038.png" alt="image-20200517182938038" style="zoom:40%; border:solid 1px" />
+ <img src="./img/image-20200517182938038.png" alt="image-20200517182938038" style="width:55%; border:solid 1px" />
 
 </br>
 
