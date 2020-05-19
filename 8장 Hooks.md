@@ -60,7 +60,7 @@ export default Info;
 
 결과
 
- <img src="/Users/hyunjungkim/Library/Application Support/typora-user-images/image-20200516213435029.png" alt="image-20200516213435029" style="zoom:67%; border:solid 1px" />
+ <img src="./img/image-20200516213435029.png" alt="image-20200516213435029" style="zoom:67%; border:solid 1px" />
 
 
 
