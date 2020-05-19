@@ -4,7 +4,7 @@
 
 
 
-
+</br>
 
 ## 8.1 useState
 
@@ -62,11 +62,11 @@ export default Info;
 
  <img src="./img/image-20200516213435029.png" alt="image-20200516213435029" style="zoom:67%; border:solid 1px\" />
 
-
+</br>
 
 ---
 
-
+</br>
 
 ## 8.2 useEffect
 
@@ -81,7 +81,7 @@ state 값이 바뀔 때 마다 컴포넌트가 리랜더링 되어 useEffect가 
 
 <img src="./img/image-20200516225042219.png" alt="image-20200516225042219" style="zoom:100%;" />
 
-
+</br>
 
 ### > 마운트될 때만 실행
 
@@ -98,7 +98,7 @@ useEffect 에서 설정한 함수를 컴포넌트가 화면에 맨 처음 렌더
 
  <img src="./img/image-20200517182938038.png" alt="image-20200517182938038" style="zoom:40%; border:solid 1px" />
 
-
+</br>
 
 ### > 특정 값이 업데이트될 때만 실행
 
@@ -124,7 +124,7 @@ useEffect(() => {
 
  <img src="./img/image-20200517185349885.png" alt="image-20200517185349885" style="zoom:40%; border: solid 1px" />
 
-
+</br>
 
 ### > 뒷정리 함수 (cleanup) 
 
@@ -157,11 +157,11 @@ App 컴포넌트에서 Info 컴포넌트의 가시성을 바꿀 수 있게 수�
 
 **>> 뒷정리 함수도 useEffect 함수의 두번째 파라미터에  따라, 빈 배열을 넣으면 오직 언마운트 될 때만 호출하고, 배열안에 특정 값을 넣으면 특정 값이 업데이트 될 때만 호출된다!**
 
-
+</br>
 
 ---
 
-
+</br>
 
 ## 8.3 useReducer
 
@@ -188,7 +188,7 @@ App 컴포넌트에서 Info 컴포넌트의 가시성을 바꿀 수 있게 수�
 > >
 > > useReducer에서 사용하는 액션 객체는 type이 필수가 아니며, 객체가 아니라 문자열이나 숫자여도 상관없다.
 
-
+</br>
 
 ### > useReducer를 사용하여 Counter 구현
 useReducer의 <u>첫 번째 파라미터에는 리듀서 함수</u>를 넣고, <u>두 번째 파라미터에는 해당 리듀서의 기본값</u>을 넣는다.
@@ -234,7 +234,7 @@ App에서 Counter를 렌더링 해주면, 잘 작동하는 것 확인.
 
 useReducer의 장점은 컴포넌트 업데이트 로직을 컴포넌트 바깥으로 빼낼 수 있다는 것!
 
-
+</br>
 
 ### > 인풋 상태 관리하기
 
@@ -285,11 +285,11 @@ export default Info_useReducer;
 
 ![image-20200517215653716](./img/image-20200517215653716.png)
 
-
+</br>
 
 ---
 
-
+</br>
 
 ## 8.4 useMemo
 
@@ -303,7 +303,7 @@ export default Info_useReducer;
 
 이 방식은 useState의 세터 함수가 호출될 때마다 컴포넌트가 리렌더링 되기 때문에, 숫자를 등록할 때뿐만 아니라, 인풋 내용이 수정될 때도 getAverage 함수가 호출된다. 이렇게 불필요한 연산은 낭비!!
 
-
+</br>
 
 ### > useMemo를 사용하여 최적화 하기
 > 렌더링 하는 과정에서 특정 값이 바뀌었을 때만 연산을 실행하고, 원하는 값이 바뀌지 않았다면 이전에 연산했던 결과를 다시 사용하는 방식이다.
@@ -312,11 +312,11 @@ export default Info_useReducer;
 
 list의 내용이 바뀔 때만 getAverage 함수가 호출 된다.
 
-
+</br>
 
 ---
 
-
+</br>
 
 ## 8.5 useCallback
 
@@ -332,7 +332,7 @@ onInsert처럼 number와 list를 넣게 되면 number 값이 바뀌거나 list�
 
 ![image-20200519203546295](./img/image-20200519203546295.png)
 
-
+</br>
 
 다음 두 코드는 완전히 똑같은 코드이다. <u>useCallback은 결국 useMemo로 함수를 반환하는 상황에서 더 편하게 사용할 수 있는 Hook이다.</u>
 **숫자, 문자열, 객체처럼 일반 값을 재사용하려면 useMemo를, 함수를 재사용하려면 useCallback을 사용하자!**
@@ -352,11 +352,11 @@ useMemo(() => {
 }, [])
 ```
 
-
+</br>
 
 ---
 
-
+</br>
 
 ## 8.6 useRef
 
@@ -368,7 +368,7 @@ useRef를 사용하여 ref를 설정하면 useRef를 통해 만든 객체 안의
 
 ![image-20200519205739103](./img/image-20200519205739103.png)
 
-
+</br>
 
 ### > 로컬 변수 사용하기
 
@@ -427,11 +427,11 @@ export default RefSample;
 ref 안의 값이 바뀌어도 컴포넌트가 렌더링되지 않는다는 점에는 주의해야 한다.
 렌더링과 관련되지 않은 값을 관리할 때만 이러한 방식으로 코드를 작성해야 한다.
 
-
+</br>
 
 ---
 
-
+</br>
 
 ## 8.7 커스텀 Hooks 만들기
 
@@ -447,11 +447,11 @@ ref 안의 값이 바뀌어도 컴포넌트가 렌더링되지 않는다는 점�
 
 ![image-20200519213747492](./img/image-20200519213747492.png)
 
-
+</br>
 
 ---
 
-
+</br>
 
 ## 8.8 다른 Hooks
 
