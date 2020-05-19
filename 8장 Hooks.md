@@ -60,7 +60,7 @@ export default Info;
 
 결과
 
- <img src="./img/image-20200516213435029.png" alt="image-20200516213435029" style="zoom:67%; border:solid 1px" />
+ <img src="./img/image-20200516213435029.png" alt="image-20200516213435029" style="zoom:67%; border:solid 1px\" />
 
 
 
@@ -79,7 +79,7 @@ export default Info;
 **위에서 만든 Info 컴포넌트에 useEffect() 를 적용했다.**
 state 값이 바뀔 때 마다 컴포넌트가 리랜더링 되어 useEffect가 실행된다.
 
-<img src="/Users/hyunjungkim/Library/Application Support/typora-user-images/image-20200516225042219.png" alt="image-20200516225042219" style="zoom:100%;" />
+<img src="./img/image-20200516225042219.png" alt="image-20200516225042219" style="zoom:100%;" />
 
 
 
@@ -96,7 +96,7 @@ useEffect 에서 설정한 함수를 컴포넌트가 화면에 맨 처음 렌더
 
  (콘솔창을 보면, 처음 마운트될 때만 실행되고, 업데이트될 때는 실행하지 않음.)
 
- <img src="/Users/hyunjungkim/Library/Application Support/typora-user-images/image-20200517182938038.png" alt="image-20200517182938038" style="zoom:40%; border:solid 1px" />
+ <img src="./img/image-20200517182938038.png" alt="image-20200517182938038" style="zoom:40%; border:solid 1px" />
 
 
 
@@ -122,7 +122,7 @@ useEffect(() => {
 
 (name값이 바뀔 때만 실행) 
 
- <img src="/Users/hyunjungkim/Library/Application Support/typora-user-images/image-20200517185349885.png" alt="image-20200517185349885" style="zoom:40%; border: solid 1px" />
+ <img src="./img/image-20200517185349885.png" alt="image-20200517185349885" style="zoom:40%; border: solid 1px" />
 
 
 
@@ -144,14 +144,14 @@ useEffect(() => {
 App 컴포넌트에서 Info 컴포넌트의 가시성을 바꿀 수 있게 수정.
 (컴포넌트가 나타날 때 콘솔에 effect가 찍히고, 사라질 때 cleanup이 찍힌다.)
 
-<img src="/Users/hyunjungkim/Library/Application Support/typora-user-images/image-20200517195538273.png" alt="image-20200517195538273" style="zoom:100%;" />
+<img src="./img/image-20200517195538273.png" alt="image-20200517195538273" style="zoom:100%;" />
 
 
 
  인풋을 수정하면, 리렌더링 될 때마다 뒷정리 함수가 계속 나타난다.
  뒷정리 함수가 호출될 때는 업데이트 되기 직전의 값을 보여준다.
 
- <img src="/Users/hyunjungkim/Library/Application Support/typora-user-images/image-20200517200148004.png" alt="image-20200517200148004" style="zoom:40%; border: solid 1px" />
+ <img src="./img/image-20200517200148004.png" alt="image-20200517200148004" style="zoom:40%; border: solid 1px" />
 
 
 
@@ -229,7 +229,7 @@ export default Counter;
 
 App에서 Counter를 렌더링 해주면, 잘 작동하는 것 확인.
 
-![image-20200517211646559](/Users/hyunjungkim/Library/Application Support/typora-user-images/image-20200517211646559.png)
+![image-20200517211646559](./img/image-20200517211646559.png)
 
 
 useReducer의 장점은 컴포넌트 업데이트 로직을 컴포넌트 바깥으로 빼낼 수 있다는 것!
@@ -283,7 +283,7 @@ const Info_useReducer = () => {
 export default Info_useReducer;
 ```
 
-![image-20200517215653716](/Users/hyunjungkim/Library/Application Support/typora-user-images/image-20200517215653716.png)
+![image-20200517215653716](./img/image-20200517215653716.png)
 
 
 
@@ -297,7 +297,7 @@ export default Info_useReducer;
 
 리스트에 숫자를 추가하면 추가된 숫자들의 평균을 보여주는 함수형 컴포넌트를 작성.
 
-![image-20200519195654365](/Users/hyunjungkim/Library/Application Support/typora-user-images/image-20200519195654365.png)
+![image-20200519195654365](./img/image-20200519195654365.png)
 
 이 방식은 useState의 세터 함수가 호출될 때마다 컴포넌트가 리렌더링 되기 때문에, 숫자를 등록할 때뿐만 아니라, 인풋 내용이 수정될 때도 getAverage 함수가 호출된다. 이렇게 불필요한 연산은 낭비!!
 
@@ -306,7 +306,7 @@ export default Info_useReducer;
 #### > useMemo를 사용하여 최적화 하기
 > 렌더링 하는 과정에서 특정 값이 바뀌었을 때만 연산을 실행하고, 원하는 값이 바뀌지 않았다면 이전에 연산했던 결과를 다시 사용하는 방식이다.
 
-![image-20200519201514863](/Users/hyunjungkim/Library/Application Support/typora-user-images/image-20200519201514863.png)
+![image-20200519201514863](./img/image-20200519201514863.png)
 
 list의 내용이 바뀔 때만 getAverage 함수가 호출 된다.
 
@@ -326,7 +326,7 @@ useCallback의 <u>첫 번째 파라미터에는 생성하고 싶은 함수</u> �
 두 번째 파라미터에 onChange처럼 빈 배열을 넣게 되면 컴포넌트가 렌더링될 때 단 한 번만 함수가 생성되고,
 onInsert처럼 number와 list를 넣게 되면 number 값이 바뀌거나 list에 새로운 항목이 추가될 때마다 함수가 생성됨.
 
-![image-20200519203546295](/Users/hyunjungkim/Library/Application Support/typora-user-images/image-20200519203546295.png)
+![image-20200519203546295](./img/image-20200519203546295.png)
 
 
 
@@ -360,7 +360,7 @@ Average 컴포넌트에서 '등록' 버튼을 눌렀을 때 포커스가 인풋 
 
 useRef를 사용하여 ref를 설정하면 useRef를 통해 만든 객체 안의 current 값이 실제 엘리먼트를 가리킨다.
 
-![image-20200519205739103](/Users/hyunjungkim/Library/Application Support/typora-user-images/image-20200519205739103.png)
+![image-20200519205739103](./img/image-20200519205739103.png)
 
 
 
@@ -433,11 +433,11 @@ ref 안의 값이 바뀌어도 컴포넌트가 렌더링되지 않는다는 점�
 
 **useInputs라는 커스텀 Hook**
 
-![image-20200519213627160](/Users/hyunjungkim/Library/Application Support/typora-user-images/image-20200519213627160.png)
+![image-20200519213627160](./img/image-20200519213627160.png)
 
 **useInputs Hook을 Info 컴포넌트에 사용**
 
-![image-20200519213747492](/Users/hyunjungkim/Library/Application Support/typora-user-images/image-20200519213747492.png)
+![image-20200519213747492](./img/image-20200519213747492.png)
 
 
 
